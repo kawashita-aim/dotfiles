@@ -102,7 +102,7 @@ colorscheme molokai
 set t_Co=256
 
 " アンダーラインを引く
-highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
+highlight CursorLine cterm=underline 
 " 背景をターミナルと同じにする
 highlight Normal ctermbg=black ctermfg=grey
 
