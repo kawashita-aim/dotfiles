@@ -9,9 +9,9 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " ネオバンドル
-NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimfiler'
+"NeoBundle 'Shougo/vimfiler'
 NeoBundle 'bling/vim-airline'
 " nerdtree
 NeoBundle 'scrooloose/nerdtree'
