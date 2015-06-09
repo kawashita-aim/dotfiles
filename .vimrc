@@ -87,12 +87,12 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 set guifont=Consolas:h12:cSHIFTJIS
 
-" ====== ?F?̐ݒ? =====
+" ====== カラースキーマ =====
 syntax on
 colorscheme molokai
 set t_Co=256
 
-" ?V???[?g?J?b?g
+" ショートカットキー
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
@@ -109,17 +109,17 @@ nnoremap st :<C-u>tabnew<CR>
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
-" Unite?g?????ƂɂȂ��??璲?ׂ?
+" Uniteを使う時に使う
 "nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
 "nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 inoremap jj <Esc>
-" Esc?̓??񉟂??Ńn?C???C?g?��?
+" Esc連打で検索のハイライトを消去
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-" ?C???T?[?g???[?h?𔲂????Ǝ????I??IME???I?t?ɂ???
+" よくわからんけどこれ入れたら矢印キーバグる
 " inoremap <silent> <unique> <Esc> <Esc>:set imsearch=0 iminsert=0<CR>
 
-" ?^?[?~?i???Ń}?E?X???L???ɂ???
+" vimでマウスを使えるようにする
 if has('mouse')
   set mouse=a
   set ttymouse=xterm2
