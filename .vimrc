@@ -9,7 +9,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 	NeoBundleFetch 'Shougo/neobundle.vim'
 call neobundle#end()
 
-" ƒoƒ“ƒhƒ‹
+" ãƒã‚ªãƒãƒ³ãƒ‰ãƒ«
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimfiler'
@@ -20,79 +20,79 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'ujihisa/unite-colorscheme'
 
-" ===== •\¦İ’è ======
-" g‚Á‚Ä‚­‚ê‚Ä‚ ‚è‚ª‚Æ‚¤
+" ===== è¡¨ç¤º ======
+" ã‚¿ã‚¤ãƒˆãƒ«ã‚’è¡¨ç¤ºã—ãªã„
 set notitle
-" :intro‚Ì‰æ–Ê‚ğo‚³‚È‚¢‚æ‚¤‚É‚·‚é
+" ã‚¿ã‚¤ãƒˆãƒ«ã‚’é£›ã°ã™
 set shortmess+=I
-" statusline‚ğí‚É•\¦
+" ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³ã‚’è¡¨ç¤º
 set laststatus=2
-" ƒJ[ƒ\ƒ‹s‚Ì”wŒiF‚ğ•Ï‚¦‚é
+" ã‚«ãƒ¼ã‚½ãƒ«è¡Œã®ãƒ©ã‚¤ãƒ³
 set cursorline
-" ƒRƒ}ƒ“ƒhƒXƒe[ƒ^ƒXs‚É•\¦
+" å…¥åŠ›ä¸­ã®ã‚³ãƒãƒ³ãƒ‰ã‚’è¡¨ç¤ºã™ã‚‹
 set showcmd
-" •s‰Â‹•¶š‚ğ•\¦‚·‚é
+" ä¸å¯è¦–æ–‡å­—ã‚’è¡¨ç¤ºã™ã‚‹
 set list
-" s––‚Ì”¼ŠpƒXƒy[ƒX,ƒ^ƒu‚ğ•\¦‚·‚é
+" è¡Œæœ«ã®åŠè§’ã‚¹ãƒšãƒ¼ã‚¹ã¨ã‚¿ãƒ–ã‚’è¡¨ç¤ºã™ã‚‹
 set listchars=trail:~
 set listchars=tab:>-,extends:>,precedes:<,nbsp:%
-" ƒoƒbƒNƒXƒy[ƒX‚ğg‚¦‚é‚æ‚¤‚É‚·‚é
+" ãƒãƒƒã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã‚’ä½¿ãˆã‚‹ã‚ˆã†ã«ã™ã‚‹
 set backspace=indent,eol,start
-" ƒXƒƒbƒvƒtƒ@ƒCƒ‹‚ğì‚ç‚È‚¢
+" ã‚¹ãƒ¯ãƒƒãƒ—ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½¿ã‚ãªã„ã‚ˆã†ã«ã™ã‚‹
 set noswapfile
-" ƒoƒbƒNƒAƒbƒv‚ğæ‚ç‚È‚¢
+" ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½¿ã‚ãªã„ã‚ˆã†ã«ã™ã‚‹
 set nobackup
-" ƒ‚[ƒhƒ‰ƒCƒ“‚ğ–³Œø‚É‚·‚é
+" ãƒ¢ãƒ¼ãƒ‰ãƒ©ã‚¤ãƒ³ã‚’æœ‰åŠ¹ã«ã—ãªã„
 set nomodeline
-" •Û‘¶‚³‚ê‚Ä‚¢‚È‚¢ƒtƒ@ƒCƒ‹‚ª‚ ‚é‚Æ‚«‚Å‚à•Ê‚Ìƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚é
+" ?Û‘??????Ä‚??È‚??t?@?C?????????Æ‚??Å‚??Ê‚Ìƒt?@?C?????J????
 set hidden
-" ŠO•”‚Åƒtƒ@ƒCƒ‹‚É•ÏX‚ª‚³‚ê‚½ê‡‚Í“Ç‚İ‚È‚¨‚·
+" æ›´æ–°æ™‚è‡ªå‹•èª­ã¿è¾¼ã¿
 set autoread
-" •Û‘¶‚³‚ê‚Ä‚¢‚È‚¢ƒtƒ@ƒCƒ‹‚ª‚ ‚é‚Æ‚«‚ÍI—¹‘O‚ÉŠm”F‚·‚é
+" ?Û‘??????Ä‚??È‚??t?@?C?????????Æ‚??ÍI???O?ÉŠm?F????
 set confirm
-" s”‚ğ•\¦‚·‚é
+" è¡Œæ•°ã‚’è¡¨ç¤ºã™ã‚‹
 set number
-" ƒ^ƒu‚Ìİ’è
+" ?^?u?Ìİ’?
 set tabstop=4
 set softtabstop=4
 
-" ƒJ[ƒ\ƒ‹‚ÌˆÊ’u‚ğ”cˆ¬
+" ?J?[?\???ÌˆÊ’u???c??
 set ruler
 
-" “r’†‚Å‰üs‚ğ‚µ‚È‚¢‚æ‚¤‚É‚·‚é
+" ?r???Å‰??s?ğ‚µ‚È‚??æ‚¤?É‚???
 set textwidth=0
 set formatoptions=q
 
-" ƒNƒŠƒbƒvƒ{[ƒh‚ğ—LŒø‚É‚·‚é
+" ?N???b?v?{?[?h???L???É‚???
 set clipboard=unnamed,autoselect
-" ƒ^[ƒ~ƒiƒ‹Ú‘±‚ğ‚‘¬‚É‚·‚é
+" ?^?[?~?i???Ú‘??ğ‚‘??É‚???
 set ttyfast
 
-" ===== ŒŸõ‚Ìİ’è =====
-" ŒŸõ•¶š‚ğƒnƒCƒ‰ƒCƒg‚·‚é
+" ===== ?????Ìİ’? =====
+" ???õ•¶????n?C???C?g????
 set hlsearch
-" ƒCƒ“ƒNƒŠƒƒ“ƒ^ƒ‹ƒT[ƒ`
+" ?C???N???????^???T?[?`
 set incsearch
-" ‘å•¶š‚Æ¬•¶š‚ğ‹æ•Ê‚µ‚È‚¢
+" ?å•¶???Æ??????????Ê‚??È‚?
 set ignorecase
-" ÅŒã”ö‚Ü‚ÅŒŸõ‚ğI‚¦‚½‚çŸ‚ÌŒŸõ‚Åæ“ª‚É–ß‚é
+" ?ÅŒ????Ü‚ÅŒ??????I?????çŸ?ÌŒ????Åæ“ª?É–ß‚?
 set wrapscan
-" ’uŠ·‚ÌgƒIƒvƒVƒ‡ƒ“‚ğƒfƒtƒHƒ‹ƒg‚Å—LŒø‚É‚·‚é
+" ?u???Ì?g?I?v?V???????f?t?H???g?Å—L???É‚???
 set gdefault
-" ŒŸõ‚Å‘å•¶š¬•¶š—¼•û‚ª“ü—Í‚³‚ê‚½‚ç‹æ•Ê‚µ‚ÄŒŸõ
+" ?????Å‘å•¶?????????????????Í‚??ê‚½?????Ê‚??ÄŒ???
 set smartcase
-" ƒGƒ“ƒR[ƒfƒBƒ“ƒO
-set encoding=cp932
-set fileencoding=cp932
+" ?G???R?[?f?B???O
+set encoding=utf-8
+set fileencoding=utf-8
 set fileencodings=utf-8
 set guifont=Consolas:h12:cSHIFTJIS
 
-" ====== F‚Ìİ’è =====
+" ====== ?F?Ìİ’? =====
 syntax on
 colorscheme molokai
 set t_Co=256
 
-" ƒVƒ‡[ƒgƒJƒbƒg
+" ?V???[?g?J?b?g
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
@@ -109,17 +109,17 @@ nnoremap st :<C-u>tabnew<CR>
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
-" Uniteg‚¤‚±‚Æ‚É‚È‚Á‚½‚ç’²‚×‚é
+" Unite?g?????Æ‚É‚È‚Á‚??ç’²?×‚?
 "nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
 "nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 inoremap jj <Esc>
-" Esc‚Ì“ñ‰ñ‰Ÿ‚µ‚ÅƒnƒCƒ‰ƒCƒgÁ‹
+" Esc?Ì“??ñ‰Ÿ‚??Åƒn?C???C?g?Á‹?
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-" ƒCƒ“ƒT[ƒgƒ‚[ƒh‚ğ”²‚¯‚é‚Æ©“®“I‚ÉIME‚ğƒIƒt‚É‚·‚é
+" ?C???T?[?g???[?h?ğ”²‚????Æ????I??IME???I?t?É‚???
 " inoremap <silent> <unique> <Esc> <Esc>:set imsearch=0 iminsert=0<CR>
 
-" ƒ^[ƒ~ƒiƒ‹‚Åƒ}ƒEƒX‚ğ—LŒø‚É‚·‚é
+" ?^?[?~?i???Åƒ}?E?X???L???É‚???
 if has('mouse')
   set mouse=a
   set ttymouse=xterm2
