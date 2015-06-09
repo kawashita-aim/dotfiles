@@ -34,6 +34,7 @@ set shortmess+=I
 set laststatus=2
 " カーソル行のライン
 set cursorline
+
 " 入力中のコマンドを表示する
 set showcmd
 " 不可視文字を表示する
@@ -62,7 +63,8 @@ set scrolloff=5
 " タブの設定
 set tabstop=4
 set softtabstop=4
-
+" instertモードで自動的にIMEがONになるのを防ぐ
+set iminsert=0
 " カーソルの行数とか場所を表示する
 set ruler
 
@@ -98,6 +100,9 @@ set guifont=Consolas:h12:cSHIFTJIS
 syntax on
 colorscheme molokai
 set t_Co=256
+
+" アンダーラインを引く
+highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 " 背景をターミナルと同じにする
 highlight Normal ctermbg=black ctermfg=grey
 
@@ -118,15 +123,11 @@ nnoremap st :<C-u>tabnew<CR>
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
-" Uniteを使う時に使う
-"nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
-"nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 inoremap jj <Esc>
+
 " Esc連打で検索のハイライトを消去
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-" よくわからんけどこれ入れたら矢印キーバグる
-" inoremap <silent> <unique> <Esc> <Esc>:set imsearch=0 iminsert=0<CR>
 
 " vimでマウスを使えるようにする
 if has('mouse')

@@ -3,6 +3,4 @@ neobundle.vim
 neomru.vim
 nerdtree
 unite-colorscheme
-unite.vim
 vim-airline
-vimfiler
