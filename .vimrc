@@ -1,13 +1,12 @@
-set nocompatible
+
 filetype plugin indent off
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+	set nocompatible
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
-	NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 " ネオバンドル
 NeoBundle 'Shougo/unite.vim'
@@ -19,6 +18,12 @@ NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'tomasr/molokai'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+call neobundle#end()
+
+NeoBundleCheck
 
 " ===== 表示 ======
 " タイトルを表示しない
@@ -52,6 +57,8 @@ set autoread
 set confirm
 " 行数を表示する
 set number
+" スクロールする時に下が見えるようにする
+set scrolloff=5
 " タブの設定
 set tabstop=4
 set softtabstop=4
@@ -81,7 +88,7 @@ set wrapscan
 set gdefault
 " 検索で大文字小文字両方が入力されたら区別して検索
 set smartcase
-" ?G???R?[?f?B???O
+" 日本語入力
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -91,6 +98,8 @@ set guifont=Consolas:h12:cSHIFTJIS
 syntax on
 colorscheme molokai
 set t_Co=256
+" 背景をターミナルと同じにする
+highlight Normal ctermbg=black ctermfg=grey
 
 " ショートカットキー
 nnoremap j gj
