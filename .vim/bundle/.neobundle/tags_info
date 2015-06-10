@@ -2,6 +2,7 @@ molokai
 neobundle.vim
 neomru.vim
 nerdtree
+tagbar
 unite-colorscheme
 vim-airline
 vim-tags

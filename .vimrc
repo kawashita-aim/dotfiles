@@ -21,6 +21,15 @@ NeoBundle 'Shougo/vimproc'				" 非同期処理を行ってくれる
 
 NeoBundle 'szw/vim-tags'				" vimtagsを追加
 
+NeoBundle "majutsushi/tagbar", { 
+	\ "autoload": { "commands": ["TagbarToggle"] } }
+if ! empty(neobundle#get("tagbar"))
+	" Width default 40
+	let g:tagbar_width = 20
+	" Map for toggle
+	nn <silent> <leader>t :TagbarToggle<CR>
+endif
+
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 call neobundle#end()
@@ -164,3 +173,8 @@ if has('mouse')
   set mouse=a
   set ttymouse=xterm2
 endif
+
+
+
+
+
