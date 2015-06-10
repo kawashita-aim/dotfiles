@@ -20,12 +20,13 @@ NeoBundle 'Shougo/vimproc'				" 非同期処理を行ってくれる
 " NeoBundle 'Townk/vim-autoclose'		" 括弧を自動で閉じてくれる
 
 NeoBundle 'szw/vim-tags'				" vimtagsを追加
+NeoBundle "vim-scripts/taglist.vim"
 
 NeoBundle "majutsushi/tagbar", { 
 	\ "autoload": { "commands": ["TagbarToggle"] } }
 if ! empty(neobundle#get("tagbar"))
 	" Width default 40
-	let g:tagbar_width = 20
+	let g:tagbar_width = 30
 	" Map for toggle
 	nn <silent> <leader>t :TagbarToggle<CR>
 endif
@@ -156,7 +157,10 @@ nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
 
 " NERDTreeのショートカット
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-e> :NERDTreeToggle<CR> 
+" Tagtoggleのショートカット
+nnoremap <silent><C-t> :TagbarToggle<CR>
+" ctagsのショートカット
 
 " 強制的にコマンドモードにするショートカット
 inoremap jj <Esc>
@@ -173,8 +177,5 @@ if has('mouse')
   set mouse=a
   set ttymouse=xterm2
 endif
-
-
-
 
 
