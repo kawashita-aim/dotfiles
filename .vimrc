@@ -19,6 +19,8 @@ NeoBundle 'ujihisa/unite-colorscheme'	" uniteのカラースキーマ
 NeoBundle 'Shougo/vimproc'				" 非同期処理を行ってくれる
 " NeoBundle 'Townk/vim-autoclose'		" 括弧を自動で閉じてくれる
 
+NeoBundle 'szw/vim-tags'				" vimtagsを追加
+
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 call neobundle#end()
@@ -105,7 +107,7 @@ set complete+=k
 " マッチするところまで自動補完
 set wildmode=list:full
 
-" 日  語入力
+" 日本語入力
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -116,22 +118,22 @@ syntax on
 colorscheme molokai
 set t_Co=256
 
-" ア  ダーラインを引く
+" アンダーラインを引く
 highlight CursorLine cterm=underline 
-" 背  をターミナルと同じにする
+" 背景をターミナルと同じにする
 highlight Normal ctermbg=black ctermfg=grey
 
-" シ  ートカットキー
+" ショートカットキー
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" 半  ージ移動
+" 半ページ移動
 nnoremap J <C-D>
 nnoremap K <C-U>
 
-" タ  作成・移動など
+" タブ作成・移動など
 noremap s <Nop>
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
@@ -147,11 +149,11 @@ nnoremap sq :<C-u>q<CR>
 " NERDTreeのショートカット
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
-" 強  的にコマンドモードにするショートカット
+" 強制的にコマンドモードにするショートカット
 inoremap jj <Esc>
 inoremap kk <Esc>
 
-" EX  ードの無効化
+" EXモードの無効化
 nnoremap Q <Nop>
 
 " Esc連打で検索のハイライトを消去

@@ -4,3 +4,5 @@ neomru.vim
 nerdtree
 unite-colorscheme
 vim-airline
+vim-tags
+vimproc
