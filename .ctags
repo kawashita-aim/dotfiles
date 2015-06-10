@@ -1,0 +1,5 @@
+" tagsファイルがあれば追加する
+--apend=yes
+" 再帰的に処理する
+--recurse=yes
+
