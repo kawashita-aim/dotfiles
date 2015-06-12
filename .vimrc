@@ -173,9 +173,9 @@ nnoremap Q <Nop>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " vimでマウスを使えるようにする
-if has('mouse')
-  set mouse=a
-  set ttymouse=xterm2
-endif
+"if has('mouse')
+"  set mouse=a
+"  set ttymouse=xterm2
+"endif
 
 
