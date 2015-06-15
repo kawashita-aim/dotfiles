@@ -10,17 +10,26 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " バンドル 
 "NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'			" ステータスバーのラインとか
+" ステータスバーのライン
+NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'Shougo/vimfiler'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'scrooloose/nerdtree'			" nerdtree
-NeoBundle 'tomasr/molokai'				" カラースキーマmolokai
-NeoBundle 'ujihisa/unite-colorscheme'	" uniteのカラースキーマ
-NeoBundle 'Shougo/vimproc'				" 非同期処理を行ってくれる
+" nerdtree
+NeoBundle 'scrooloose/nerdtree'
+" カラースキーマ
+NeoBundle 'tomasr/molokai'
+" Uniteのカラースキーマ
+NeoBundle 'ujihisa/unite-colorscheme'
+" 非同期処理を行ってくれる
+NeoBundle 'Shougo/vimproc'
 " NeoBundle 'Townk/vim-autoclose'		" 括弧を自動で閉じてくれる
 
-NeoBundle 'szw/vim-tags'				" vimtagsを追加
+" vimtagを追加
+NeoBundle 'szw/vim-tags'
 NeoBundle "vim-scripts/taglist.vim"
+
+" Vimとtmuxのキーバインドを同じようにする
+NeoBundle 'christoomey/vim-tmux-navigator'
 
 NeoBundle "majutsushi/tagbar", { 
 	\ "autoload": { "commands": ["TagbarToggle"] } }
