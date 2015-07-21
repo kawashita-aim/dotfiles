@@ -1,0 +1,34 @@
+[user]
+    name = tkawashita
+    email = tkawashita@aiming-inc.com
+[color]
+    ui = auto
+[core]
+    autocrlf = false
+	excludesfile = /home/tkawashita/.gitignore
+	editor = vim -c \"set fenc=utf-8\"
+
+[alias]
+    # Gerrit関連のalias定義
+    current-branch = "!sh -c \"git branch | grep '*' | awk '{ print \\$2 }' \"" 
+    push-for-review = "!sh -c 'git push origin HEAD:refs/for/master/`git current-branch`'" 
+    push-for-review-fix = "!sh -c 'git push origin HEAD:refs/for/fix/`git current-branch`'" 
+    pfr = "!sh -c 'git push-for-review'" 
+    pfr-fix = "!sh -c 'git push-for-review-fix'" 
+    # 以下はGerritには関係ないがお好みで
+    co = checkout
+    br = branch
+    st = status
+    df = diff
+    ds = diff --staged
+    topic = "!sh -c 'git co -b $1 master' dummy" 
+    dfx = !git diff | gitx
+	tree = log --decorate --graph --oneline
+    pr = pull --rebase origin master
+    fe = fetch
+    unstage = reset HEAD --
+    k = !gitk
+    dhh = diff HEAD^
+[credential]
+	helper = cache
+	helper = cache

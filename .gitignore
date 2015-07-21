@@ -1,0 +1,50 @@
+# グローバルのgitignore
+# どのgitでもこれが使える
+./.gitignore
+./readme.txt
+./datamaster
+./develop
+
+# ctags用
+tags
+
+# サーバー用
+mgrsv.mirrorz-dev0.cf
+gmsv.mirrorz-dev0.cf
+gldsv.mirrorz-dev0.cf
+server/db_migrations/development.txt
+BuildDate.txt
+BuildDate.txt.meta
+BuildVersion.txt
+BuildVersion.txt.meta
+LaunchScheme.txt
+LaunchScheme.txt.meta
+
+# ログ
+gldsvlog
+gmsvlog
+mgrsvlog
+mtsvlog
+pusvlog
+
+# クライアント用
+unity/nclient/Assets/Scene/Title.unity
+unity/nclient/Assets/Editor/mod_pbxproj.py.meta
+unity/nclient/Assets/Scripts/tags.meta
+unity/nclient/obj
+unity/nclient/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll
+unity/nclient/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
+unity/nclient/Assets/UnityVS/Editor/*
+unity/nclient/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll.meta
+
+*.dll
+*.csproj
+*.unityproj
+UnityVS/
+unity/nclient/UnityVS.nclient.sln
+
+ScreenShots
+
+# git用
+.vim.*
+.vim.
