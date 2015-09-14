@@ -7,8 +7,9 @@ PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~
 
 ########################################
 # 基本機能
-# バインドキーをvimにする
-bindkey -v
+# バインドキーをemacsにする
+bindkey -e
+alias vi='vim'
 
 ########################################
 # オプション
@@ -76,7 +77,6 @@ bindkey '^o' cool-peco-git-checkout
 zle -N cool-peco-openfile-vim
 bindkey '^v' cool-peco-openfile-vim
 
-
 # git status pece
 function peco_select_from_git_status(){
 	git status --porcelain | \
@@ -92,7 +92,7 @@ function peco_insert_selected_git_files(){
 }
 
 zle -N peco_insert_selected_git_files
-bindkey "^a" peco_insert_selected_git_files
+#bindkey "^a" peco_insert_selected_git_files
 
 # Ctrl + Sで固まるのを防ぐ
 
@@ -101,4 +101,10 @@ stty stop undef
 # SSH接続してgitのpushとかしようとしたら警告出るのを防ぐ
 unset SSH_ASKPASS
 
+alias -g V="awk '{print $1 }' | tr -d ':'"
 
+function grep-open-vim() {
+  echo -n "(* '-')? < "
+  read INPUT
+  vim `git grep ${INPUT} | peco | awk -F ':' '{ print $1 }'`
+}

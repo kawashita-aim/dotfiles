@@ -8,7 +8,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " バンドル 
-"NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite.vim'
 " ステータスバーのライン
 NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'Shougo/vimfiler'
@@ -19,9 +19,16 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tomasr/molokai'
 " Uniteのカラースキーマ
 NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'lambdalisue/unite-grep-vcs'
+
 " 非同期処理を行ってくれる
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/neocomplete'
+" タブ補完
+" NeoBundle 'Shougo/neocomplcache'
 " NeoBundle 'Townk/vim-autoclose'		" 括弧を自動で閉じてくれる
+
+NeoBundle 'osyo-manga/vim-marching'
 
 " vimtagを追加
 NeoBundle 'szw/vim-tags'
@@ -29,6 +36,11 @@ NeoBundle "vim-scripts/taglist.vim"
 
 " Vimとtmuxのキーバインドを同じようにする
 NeoBundle 'christoomey/vim-tmux-navigator'
+
+" C++11用シンタックスハイライト
+NeoBundleLazy 'vim-jp/cpp-vim', {
+	\ 'autoload' : {'filetypes' : 'cpp'}
+	\ }
 
 NeoBundle "majutsushi/tagbar", { 
 	\ "autoload": { "commands": ["TagbarToggle"] } }
@@ -190,4 +202,135 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "  set ttymouse=xterm2
 "endif
 
+" =============================================
+" neocomplete の設定
+" =============================================
+let g:acp_enableAtStartup = 0
+" NeoCompleteを有効にする
+let g:neocomplete#enable_at_startup = 1
+" Smart Case有効化。大文字が入力されるまで大文字小文字の区別を無視する
+let g:neocomplete#enable_smart_case = 1
+" 補完が自動で開始される文字数
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" neocompleteを自動的にロックするバッファ名のパターン
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+" _(アンダーバー)区切りの補完を有効化
+let g:neocomplete#enable_underbar_completion = 1
+" 補完候補の一番先頭を選択状態にする
+let g:neocomplete#enable_auto_select = 1
 
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" 変換候補が出ていたら確定、なければ改行
+inoremap <expr><CR>   pumvisible() ? "\<C-n>" . neocomplete#close_popup()  : "<CR>"
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplete#close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+" Close popup by <Space>.
+"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+
+" For cursor moving in insert mode(Not recommended)
+"inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
+"inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
+"inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
+"inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
+" Or set this.
+"let g:neocomplete#enable_cursor_hold_i = 1
+" Or set this.
+"let g:neocomplete#enable_insert_char_pre = 1
+
+" AutoComplPop like behavior.
+"let g:neocomplete#enable_auto_select = 1
+
+" Shell like behavior(not recommended).
+"set completeopt+=longest
+"let g:neocomplete#enable_auto_select = 1
+"let g:neocomplete#disable_auto_complete = 1
+"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+" 入力モードで開始する
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable=1
+" ファイル履歴を200まで保存
+let g:unite_source_file_mru_limit=200
+" file_mruの表示フォーマット
+let g:unite_source_file_mru_filename_format = ''
+"let g:unite_enable_split_vertically = 1
+" ESCキーを2回押すと終了する
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<C
+" 最近使用したファイル一覧
+nnoremap <Space>um :<C-u>Unite file_mru<CR>
+" grep
+nnoremap <Space>ug :<C-u>Unite grep/git:. -buffer-name=search-buffer<CR>
+" ウィンドウを分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
+" " ウィンドウを縦に分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
+
+" For perlomni.vim setting.
+" https://github.com/c9s/perlomni.vim
+"let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+" marching.vimの設定（補完）
+" 補完ではなくて同期処理で補完する
+let g:marching_backend = "sync_clang_command"
+
+" オプションの設定
+" これはclangのコマンドに渡される
+let g:marching_clang_command_option="-std=c++1y"
+
+" neocomplete.vim と併用して使用する場合
+" neocomplete.vim を使用すれば自動補完になる
+let g:marching_enable_neocomplete = 1
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.cpp =
+    \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
