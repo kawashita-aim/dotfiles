@@ -1,4 +1,3 @@
-
 filetype plugin indent off
 if has('vim_starting')
 	set nocompatible
@@ -24,6 +23,7 @@ NeoBundle 'lambdalisue/unite-grep-vcs'
 " 非同期処理を行ってくれる
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/neocomplete'
+
 " タブ補完
 " NeoBundle 'Shougo/neocomplcache'
 " NeoBundle 'Townk/vim-autoclose'		" 括弧を自動で閉じてくれる
@@ -167,6 +167,10 @@ nnoremap K <C-U>
 " 先頭文字行末文字に移動
 nnoremap H ^
 nnoremap L $
+
+" 行の末尾，先頭で挿入モード開始
+nnoremap A I
+nnoremap F A
 
 " タブ作成・移動など
 noremap s <Nop>
@@ -335,3 +339,7 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 let g:neocomplete#force_omni_input_patterns.cpp =
     \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+
+" Ctags関連のショートカット
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
