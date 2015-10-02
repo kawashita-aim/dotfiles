@@ -33,6 +33,7 @@ NeoBundle 'osyo-manga/vim-marching'
 " vimtagを追加
 NeoBundle 'szw/vim-tags'
 NeoBundle "vim-scripts/taglist.vim"
+NeoBundle 'soramugi/auto-ctags.vim'
 
 " Vimとtmuxのキーバインドを同じようにする
 NeoBundle 'christoomey/vim-tmux-navigator'

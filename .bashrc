@@ -7,3 +7,4 @@ if [ -f /etc/bashrc ]; then
 	source /etc/bashrc
 fi
 
+alias grep='grep --color'

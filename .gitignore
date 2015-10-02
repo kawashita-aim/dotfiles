@@ -36,6 +36,7 @@ unity/nclient/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll
 unity/nclient/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
 unity/nclient/Assets/UnityVS/Editor/*
 unity/nclient/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll.meta
+unity/nclient/ProjectSettings/ProjectSettings.asset
 
 *.dll
 *.csproj
