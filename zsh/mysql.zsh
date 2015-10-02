@@ -1,7 +1,6 @@
 
 cd ~/
-
-git clone https://github.com/pengwynn/grc
+git clone https://github.com/pengwynn/grc.git
 
 cd grc
 sudo sh ./install.sh
