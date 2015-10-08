@@ -8,3 +8,12 @@ if [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   	source ~/.bashrc
   fi
 fi
+
+# TMUX Settings
+if [ -z $TMUX ]; then
+	if $(tmux has-session); then
+		tmux
+	else
+		tmux
+	fi
+fi
