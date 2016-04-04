@@ -1,9 +1,11 @@
 HISTFILE=~/.zsh_history
+
 HISTSIZE=1000000
 SAVEHIST=1000000
 
 PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~
 %# "
+export LD_LIBRARY_PATH="/usr/local/bin"
 
 ########################################
 # 基本機能
@@ -65,19 +67,6 @@ SPROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}�
 ########################################
 # cool-peco
 ########################################
-source "$HOME/cool-peco/cool-peco"
-zle -N cool-peco-history
-bindkey '^r' cool-peco-history
-zle -N cool-peco-filename-search
-bindkey '^g' cool-peco-filename-search
-zle -N cool-peco-git-log
-bindkey '^l' cool-peco-git-log
-zle -N cool-peco-git-checkout
-bindkey '^o' cool-peco-git-checkout
-zle -N cool-peco-openfile-vim
-bindkey '^v' cool-peco-openfile-vim
-
-# git status pece
 function peco_select_from_git_status(){
 	git status --porcelain | \
 	peco |
@@ -91,8 +80,25 @@ function peco_insert_selected_git_files(){
 	zle reset-prompt
 }
 
-zle -N peco_insert_selected_git_files
+source "$HOME/cool-peco/cool-peco"
+zle -N cool-peco-history
+bindkey '^r' cool-peco-history
+zle -N cool-peco-filename-search
+bindkey '^g' cool-peco-filename-search
+zle -N cool-peco-git-log
+bindkey '^l' cool-peco-git-log
+zle -N cool-peco-git-checkout
+bindkey '^o' cool-peco-git-checkout
+zle -N cool-peco-openfile-vim
+bindkey '^v' cool-peco-openfile-vim
+zle -N cool-peco-ssh
+bindkey '^h' cool-peco-ssh
+
+#zle -N peco_insert_selected_git_files
 #bindkey "^a" peco_insert_selected_git_files
+
+zle -N peco_select_from_git_status
+bindkey "^t" peco_select_from_git_status
 
 # Ctrl + Sで固まるのを防ぐ
 

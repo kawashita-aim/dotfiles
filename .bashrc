@@ -8,3 +8,5 @@ if [ -f /etc/bashrc ]; then
 fi
 
 alias grep='grep --color'
+
+export TMOUT = 0

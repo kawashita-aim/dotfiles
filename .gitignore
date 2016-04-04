@@ -5,6 +5,8 @@
 ./datamaster
 ./develop
 
+server/src/gmsv2
+
 # ctags用
 tags
 
@@ -12,6 +14,15 @@ tags
 mgrsv.mirrorz-dev0.cf
 gmsv.mirrorz-dev0.cf
 gldsv.mirrorz-dev0.cf
+mtsv.mirrorz-dev0.cf
+pusv.mirrorz-dev0.cf
+
+gldsv.mirrorz-kawashita.cf
+gmsv.mirrorz-kawashita.cf
+mgrsv.mirrorz-kawashita.cf
+mtsv.mirrorz-kawashita.cf
+pusv.mirrorz-kawashita.cf
+
 server/db_migrations/development.txt
 BuildDate.txt
 BuildDate.txt.meta
@@ -54,3 +65,15 @@ ScreenShots
 
 # script
 script/restart.csh
+script/rm_logs.sh
+script/server_include.sh
+
+# SRDebugger
+StompyRobot.meta
+StompyRobot/
+
+# Plugins関係
+unity/nclient/Assets/Plugins/*
+
+unity/nclient/ProjectSettings/UnityAdsSettings.asset
+unity/nclient/ProjectSettings/UnityAnalyticsManager.asset

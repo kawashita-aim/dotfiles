@@ -172,6 +172,8 @@ nnoremap L $
 nnoremap A I
 nnoremap F A
 
+" 単語移動関連
+
 " タブ作成・移動など
 noremap s <Nop>
 nnoremap sj <C-w>j
@@ -184,6 +186,8 @@ nnoremap st :<C-u>tabnew<CR>
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
+nnoremap s> :<C-w>><CR>
+nnoremap s< :<C-w><<CR>
 
 " NERDTreeのショートカット
 nnoremap <silent><C-e> :NERDTreeToggle<CR> 
@@ -309,6 +313,7 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<C
 " 最近使用したファイル一覧
 nnoremap <Space>um :<C-u>Unite file_mru<CR>
+nnoremap <Space>uy :<C-u>Unite file<CR>
 " grep
 nnoremap <Space>ug :<C-u>Unite grep/git:. -buffer-name=search-buffer<CR>
 " ウィンドウを分割して開く
@@ -343,3 +348,5 @@ let g:neocomplete#force_omni_input_patterns.cpp =
 " Ctags関連のショートカット
 nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
 nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
+" Ctagsの設定
+set tags=<tags_path>
