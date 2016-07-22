@@ -1,0 +1,19 @@
+
+# molokaiを設定するときにエラーが出るとき（初期は基本的にエラー）
+
+mkdir ~/.vim
+cd ~/.vim
+mkdir colors
+git clone https://github.com/tomasr/molokai
+mv molokai/colors/molokai.vim ~/.vim/colors/
+
+vi ~/.vimrc
+syntax on
+colorscheme molokai
+set t_Co=256
+
+# dotfilesの中の.vimフォルダをroot直下に置く
+mkdir -p ~/.vim/bundle
+
+# NeoBundleをリポジトリから取得（しなくてもいいかも？）
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
