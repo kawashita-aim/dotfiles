@@ -198,3 +198,14 @@ nnoremap Q <Nop>
 " Esc連打で検索のハイライトを消去
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" Terminalの背景色とTerminalで使うvimの背景色を同じにする
+if !has('gui_running')
+	augroup seiya
+		autocmd!
+		autocmd VimEnter,ColorScheme * highlight Normal ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight LineNr ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight SignColumn ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight VertSplit ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
+	augroup END
+endif
