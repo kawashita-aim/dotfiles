@@ -23,10 +23,22 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# llとか使えるようにする
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# ls系コマンド
+# macとlinuxで挙動が違う
+case "${OSTYPE}" in
+darwin*)
+alias ls="ls -G"
+alias ll="ls -alF -lG"
+alias la="ls -A -laG"
+alias l="ls -CF -G"
+	;;
+linux*)
+alias ls='ls --color=auto'
+alias ll='ls -alF --color=auto'
+alias la='ls -A --color=auto'
+alias l='ls -CF --color=auto'
+	;;
+esac
 
 # dfにメモリ表示
 alias df='df -h'
