@@ -1,79 +1,11 @@
 # グローバルのgitignore
 # どのgitでもこれが使える
 ./.gitignore
-./readme.txt
-./datamaster
-./develop
-
-server/src/gmsv2
 
 # ctags用
 tags
-
-# サーバー用
-mgrsv.mirrorz-dev0.cf
-gmsv.mirrorz-dev0.cf
-gldsv.mirrorz-dev0.cf
-mtsv.mirrorz-dev0.cf
-pusv.mirrorz-dev0.cf
-
-gldsv.mirrorz-kawashita.cf
-gmsv.mirrorz-kawashita.cf
-mgrsv.mirrorz-kawashita.cf
-mtsv.mirrorz-kawashita.cf
-pusv.mirrorz-kawashita.cf
-
-server/db_migrations/development.txt
-BuildDate.txt
-BuildDate.txt.meta
-BuildVersion.txt
-BuildVersion.txt.meta
-LaunchScheme.txt
-LaunchScheme.txt.meta
-
-# ログ
-gldsvlog
-gmsvlog
-mgrsvlog
-mtsvlog
-pusvlog
-
-# クライアント用
-unity/nclient/Assets/Scene/Title.unity
-unity/nclient/Assets/Editor/mod_pbxproj.py.meta
-unity/nclient/Assets/Scripts/tags.meta
-unity/nclient/obj
-unity/nclient/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll
-unity/nclient/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
-unity/nclient/Assets/UnityVS/Editor/*
-unity/nclient/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll.meta
-unity/nclient/ProjectSettings/ProjectSettings.asset
-unity/nclient/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll
-
-*.dll
-*.csproj
-*.unityproj
-UnityVS/
-unity/nclient/Assets/UnityVS.meta
-unity/nclient/UnityVS.nclient.sln
-
-ScreenShots
 
 # git用
 .vim.*
 .vim.
 
-# script
-script/restart.csh
-script/rm_logs.sh
-script/server_include.sh
-
-# SRDebugger
-StompyRobot.meta
-StompyRobot/
-
-# Plugins関係
-unity/nclient/Assets/Plugins/*
-
-unity/nclient/ProjectSettings/UnityAdsSettings.asset
-unity/nclient/ProjectSettings/UnityAnalyticsManager.asset
