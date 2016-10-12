@@ -5,12 +5,16 @@ fi
 
 # Wをwにすることでファイルのフルパスをプロンプトに表示できる
 # default プロンプト設定
-#export PS1='\[\033[31m\][\h: \w]\n\$\[\033[30m\] '
+#export PS1='\[\033[36m\][\h\[\033[32m\]:\w\n\$\[\033[00m\] '
 
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
+if [ "$(uname)" == 'Darwin' ]; then
+	source /usr/local/etc/bash_completion.d/git-prompt.sh
+	source /usr/local/etc/bash_completion.d/git-completion.bash
+else
+	source ~/dotfiles/git-prompt.sh
+	source ~/dotfiles/git-completion.bash
+fi
 
-# git管理されているフォルダではプロンプト表示を変更させる
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\033[36m\]\h\[\033[32m\]:\w\[\033[35m\]$(__git_ps1 [%s])\[\033[00m\]\n\$ '
 export PATH=/Users/ka1kai/.gem/ruby/2.3.0/bin:$PATH
