@@ -1,7 +1,20 @@
 filetype plugin indent off
-if 1
-	set nocompatible
 if has('vim_starting')
+	set nocompatible
+	" neobundleをインストールしていない場合は自動インストールする
+	if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
+		echo "install neobundle..."
+		" neobundleのクローン
+		:call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+	endif
+	" molokaiをインストールしていない場合は自動インストールする
+	if !isdirectory(expand("~/.vim/colors/"))
+		echo "install molokai..."
+		:call system("git clone https://github.com/tomasr/molokai ~/.vim/molokai")
+		:call system("mkdir ~/.vim/colors/")
+		:call system("mv ~/.vim/molokai/colors/molokai.vim ~/.vim/colors/")
+		:call system("rm -rf ~/.vim/molokai")
+	endif
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
@@ -50,11 +63,10 @@ endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" vimrcに記述されたプラグインでインストールされてないものがないかチェックする
+NeoBundleCheck
 
 call neobundle#end()
-
-NeoBundleCheck
-endif
 
 
 " ===== 表示 ======
