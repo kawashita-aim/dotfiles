@@ -18,6 +18,7 @@ mv molokai/colors/molokai.vim ~/.vim/colors/
 
 ## VSCodeのセッティング
 
+```
 １．自分の環境に合わせてVSCodeをインストール
 ２．EditorConfig VS Code SnippetをVSCodeに入れる
 	https://marketplace.visualstudio.com/items?itemName=zgudino.editorconfig-vscode-snippet
@@ -25,8 +26,11 @@ mv molokai/colors/molokai.vim ~/.vim/colors/
 	https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 ４．SyncUpdateでGithubに上げてる自分のセッティングを反映させる
 	tokenはtoken.txt（もしくはGithubのGistのコメントのところ）
+```
 
 ### Unityとの対応
+
+```
 １．拡張機能を入れる
 	・Legacy C# Support
 	https://marketplace.visualstudio.com/items?itemName=ms-vscode.omnisharp
@@ -42,3 +46,4 @@ mv molokai/colors/molokai.vim ~/.vim/colors/
 	https://github.com/dotBunny/VSCode/
 	・Unityの設定→External ToolsをVisualStudioCodeにする
 	・VSCodeタブのEnable Integration, Use Unity Debuggerにチェックを入れる
+```
