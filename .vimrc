@@ -27,7 +27,8 @@ NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'Shougo/vimfiler'
 NeoBundle 'bling/vim-airline'
 " nerdtree
-NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'seventhsense/nerdtree', 'development'
 " カラースキーマ
 NeoBundle 'tomasr/molokai'
 " Uniteのカラースキーマ
@@ -43,7 +44,7 @@ NeoBundle 'Shougo/neocomplete'
 " NeoBundle 'Townk/vim-autoclose'		" 括弧を自動で閉じてくれる
 
 " YouCompleteMe
-" NeoBundle "Valloric/YouCompleteMe"
+NeoBundle "Valloric/YouCompleteMe"
 
 NeoBundle 'osyo-manga/vim-marching'
 
@@ -202,6 +203,16 @@ nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
 nnoremap s> :<C-w>><CR>
 nnoremap s< :<C-w><<CR>
+
+" NERDTreeのショートカット
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" NERDTree config
+let g:NERDTreeShowBookmarks=1
+" ignore
+let g:NERDTreeIgnore=['\.vim$','\.meta$']
+
+
+nnoremap <silent><C-w> :TagbarTottle<CR>
 
 " 強制的にコマンドモードにするショートカット
 inoremap jj <Esc>
