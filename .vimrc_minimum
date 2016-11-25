@@ -1,0 +1,67 @@
+set nu
+set ruler
+set notitle
+set iminsert=0
+set shortmess+=I
+set laststatus=2
+set cursorline
+set nomodeline
+set noswapfile
+set incsearch
+set ignorecase
+set hlsearch
+set autoread
+set smartcase
+set smartindent
+set wildmenu
+set t_kD=^?
+set iminsert=0
+set textwidth=0
+set formatoptions=q
+
+set clipboard+=unnamed,autoselect
+
+set backspace=indent,eol,start
+
+set textwidth=0
+set formatoptions=q
+
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set guifont=Consolas:h12:cSHIFTJIS
+
+highlight CursorLine cterm=underline
+
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+nnoremap J <C-D>
+nnoremap K <C-U>
+
+nnoremap H ^
+nnoremap L $
+
+nnoremap A I
+nnoremap F A
+
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sn gt
+nnoremap sb gT
+nnoremap st :<C-u>tabnew<CR>
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
+nnoremap sq :<C-u>q<CR>
+nnoremap s> :<C-w>><CR>
+nnoremap s< :<C-w><<CR>
+
+inoremap jj <Esc>
+inoremap kk <Esc>
+
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
