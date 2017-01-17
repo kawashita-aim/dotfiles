@@ -36,7 +36,15 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'lambdalisue/unite-grep-vcs'
 
 " 非同期処理を行ってくれる
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc.vim', {
+	\ 'build' : {
+	\ 'windows' : 'make -f make_mingw32.mak', 
+	\ 'cygwin' : 'make -f make_cygwin.mak', 
+	\ 'mac' : 'make -f make_mac.mak', 
+	\ 'unix' : 'make -f make_unix.mac', 
+	\ },
+	\ }
+
 " NeoBundle 'Shougo/neocomplete'
 
 " 補完
@@ -235,3 +243,15 @@ if !has('gui_running')
 		autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
 	augroup END
 endif
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+let g:ycm_server_use_vim_stdout = 1
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 0
+
+let g:ycm_always_populate_location_list = 1
+let g:ycm_open_loclist_on_ycm_diags = 1
