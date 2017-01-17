@@ -214,11 +214,16 @@ nnoremap s< :<C-w><<CR>
 
 " NERDTreeのショートカット
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" NERDTreeのツリーを開く場所
+let g:NERDTreeWinPos="left" "right
+" NERDTreeの幅
+let g:NERDTreeWinSize="28"
 " NERDTree config
 let g:NERDTreeShowBookmarks=1
 " ignore
 let g:NERDTreeIgnore=['\.vim$','\.meta$']
-
+" 隠しファイルのON
+let g:NERDTreeShowHidden=1
 
 nnoremap <silent><C-w> :TagbarTottle<CR>
 
