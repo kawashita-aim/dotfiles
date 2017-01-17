@@ -37,16 +37,16 @@ NeoBundle 'lambdalisue/unite-grep-vcs'
 
 " 非同期処理を行ってくれる
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/neocomplete'
+" NeoBundle 'Shougo/neocomplete'
 
 " 補完
 " NeoBundle 'Shougo/neocomplcache'
 " NeoBundle 'Townk/vim-autoclose'		" 括弧を自動で閉じてくれる
 
 " YouCompleteMe
-NeoBundle "Valloric/YouCompleteMe"
+" NeoBundle "Valloric/YouCompleteMe"
 
-NeoBundle 'osyo-manga/vim-marching'
+" NeoBundle 'osyo-manga/vim-marching'
 
 " vimtagを追加
 NeoBundle 'szw/vim-tags'
