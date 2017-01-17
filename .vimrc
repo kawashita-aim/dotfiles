@@ -56,6 +56,9 @@ NeoBundle 'Shougo/vimproc.vim', {
 
 " NeoBundle 'osyo-manga/vim-marching'
 
+" EditorConfig
+NeoBundle 'editorconfig/editorconfig-vim'
+
 " vimtagを追加
 NeoBundle 'szw/vim-tags'
 NeoBundle "vim-scripts/taglist.vim"
