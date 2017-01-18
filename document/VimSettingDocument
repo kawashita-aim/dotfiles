@@ -17,3 +17,6 @@ mkdir -p ~/.vim/bundle
 
 # NeoBundleをリポジトリから取得（しなくてもいいかも？）
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
+# EditorConfig
+https://github.com/editorconfig/editorconfig-vim
