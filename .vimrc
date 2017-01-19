@@ -47,9 +47,9 @@ NeoBundle 'Shougo/vimproc.vim', {
 
 " 補完
 " vim-clang
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'justmao945/vim-clang'
-NeoBundle 'Shougo/neoinclude.vim'
+" NeoBundle 'Shougo/neocomplete.vim'
+" bNeoBundle 'justmao945/vim-clang'
+" NeoBundle 'Shougo/neoinclude.vim'
 
 " YouCompleteMe
 " NeoBundle "Valloric/YouCompleteMe"
@@ -59,6 +59,8 @@ NeoBundle 'editorconfig/editorconfig-vim'
 
 " vimを開いたときに自動的にctags用のtagが作成される
 NeoBundle 'soramugi/auto-ctags.vim'
+" TagsGenerate でtagを再構築してくれるようになる
+NeoBundle 'szw/vim-tags'
 
 " Vimとtmuxのキーバインドを同じようにする
 NeoBundle 'christoomey/vim-tmux-navigator'
@@ -274,3 +276,8 @@ if executable('clang-format')
 		autocmd BufWrite,FileWritePre,FileAppendPre *.cpp call s:clang_format()
 	augroup END
 endif
+
+" ctagsの設定
+" key bind
+nnoremap T <C-]>
+nnoremap P <C-o>
