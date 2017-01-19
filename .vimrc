@@ -45,23 +45,19 @@ NeoBundle 'Shougo/vimproc.vim', {
 	\ },
 	\ }
 
-" NeoBundle 'Shougo/neocomplete'
-
 " 補完
-" NeoBundle 'Shougo/neocomplcache'
-" NeoBundle 'Townk/vim-autoclose'		" 括弧を自動で閉じてくれる
+" vim-clang
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'justmao945/vim-clang'
+NeoBundle 'Shougo/neoinclude.vim'
 
 " YouCompleteMe
 " NeoBundle "Valloric/YouCompleteMe"
 
-" NeoBundle 'osyo-manga/vim-marching'
-
 " EditorConfig
 NeoBundle 'editorconfig/editorconfig-vim'
 
-" vimtagを追加
-NeoBundle 'szw/vim-tags'
-NeoBundle "vim-scripts/taglist.vim"
+" vimを開いたときに自動的にctags用のtagが作成される
 NeoBundle 'soramugi/auto-ctags.vim'
 
 " Vimとtmuxのキーバインドを同じようにする
