@@ -204,6 +204,7 @@ nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h
+nnoremap sr <C-w>x
 nnoremap sn gt
 nnoremap sb gT
 nnoremap st :<C-u>tabnew<CR>
@@ -262,20 +263,23 @@ let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_always_populate_location_list = 1
 let g:ycm_open_loclist_on_ycm_diags = 1
 
-" 保存時に自動的にClang formatする(.h .cpp のみ)
-function! s:clang_format()
+" clang-format用関数
+function! ClangFormat()
 	let now_line = line(".")
 	exec ":%! clang-format"
 	exec ":" . now_line
 endfunction
 
-if executable('clang-format')
-	augroup cpp_clang_format
-		autocmd!
-		autocmd BufWrite,FileWritePre,FileAppendPre *.h call s:clang_format()
-		autocmd BufWrite,FileWritePre,FileAppendPre *.cpp call s:clang_format()
-	augroup END
-endif
+" 保存時に自動的にclang-format
+"if executable('clang-format')
+"	augroup cpp_clang_format
+"		autocmd!
+"		autocmd BufWrite,FileWritePre,FileAppendPre *.h call s:clang_format()
+"		autocmd BufWrite,FileWritePre,FileAppendPre *.cpp call s:clang_format()
+"	augroup END
+"endif
+
+nnoremap sc :call ClangFormat()<CR>
 
 " ctagsの設定
 " key bind
