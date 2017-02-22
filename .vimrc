@@ -65,6 +65,9 @@ NeoBundle 'szw/vim-tags'
 " Vimとtmuxのキーバインドを同じようにする
 NeoBundle 'christoomey/vim-tmux-navigator'
 
+" ファイル検索に使う
+NeoBundle 'ctrlpvim/ctrlp.vim'
+
 " C++11用シンタックスハイライト
 NeoBundleLazy 'vim-jp/cpp-vim', {'autoload' : {'filetypes' : 'cpp'} }
 
