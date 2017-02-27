@@ -214,11 +214,15 @@ nnoremap st :<C-u>tabnew<CR>
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
-nnoremap s> :<C-w>><CR>
-nnoremap s< :<C-w><<CR>
+nnoremap L :<C-w>><CR>
+nnoremap H :<C-w><<CR>
+
+nnoremap -L <C-w>><CR>
 
 " NERDTreeのショートカット
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-n>b :Bookmark<CR>
+nnoremap <silent><C-n>d :ClearBookmarks<CR>
 " NERDTreeのツリーを開く場所
 let g:NERDTreeWinPos="left" "right
 " NERDTreeの幅
