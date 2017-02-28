@@ -214,8 +214,6 @@ nnoremap st :<C-u>tabnew<CR>
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
-nnoremap L :<C-w>><CR>
-nnoremap H :<C-w><<CR>
 
 nnoremap -L <C-w>><CR>
 
