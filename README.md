@@ -61,7 +61,5 @@ brew install mono
 ## Font Setting
 
 - Install Inconsolate
-```
-https://fonts.google.com/specimen/Inconsolata
-```
+ - https://fonts.google.com/specimen/Inconsolata
 
