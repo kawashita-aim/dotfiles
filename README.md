@@ -4,8 +4,9 @@
 
  .vimrcと.vimフォルダをroot直下に置くと幸せになれる
 
-### molokaiの設定
-#### vimrcに入れているがエラーが出るときは手動で対応する
+### molokai with Vim
+
+- vimrcに入れているがエラーが出るときは手動で対応する
 
 ```
 mkdir ~/.vim
@@ -18,15 +19,17 @@ mv molokai/colors/molokai.vim ~/.vim/colors/
 
 ## VSCode Setting
 
-```
 １．自分の環境に合わせてVSCodeをインストール
 ２．EditorConfig VS Code SnippetをVSCodeに入れる
+```
 	https://marketplace.visualstudio.com/items?itemName=zgudino.editorconfig-vscode-snippet
+```
 ３．code settings sync をVSCodeに入れる
+```
 	https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+```
 ４．SyncUpdateでGithubに上げてる自分のセッティングを反映させる
 	tokenはtoken.txt（もしくはGithubのGistのコメントのところ）
-```
 
 ### VSCode with Unity
 
