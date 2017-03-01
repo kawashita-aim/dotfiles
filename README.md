@@ -1,6 +1,6 @@
-# dotfiles
+# Ka1kai dotfiles
 
-## 自分用のvimを使えるようにするまで
+## vim Setting
 
  .vimrcと.vimフォルダをroot直下に置くと幸せになれる
 
@@ -16,7 +16,7 @@ mv molokai/colors/molokai.vim ~/.vim/colors/
 ```
 
 
-## VSCodeのセッティング
+## VSCode Setting
 
 ```
 １．自分の環境に合わせてVSCodeをインストール
@@ -28,7 +28,7 @@ mv molokai/colors/molokai.vim ~/.vim/colors/
 	tokenはtoken.txt（もしくはGithubのGistのコメントのところ）
 ```
 
-### Unityとの対応
+### VSCode with Unity
 
 ```
 １．拡張機能を入れる
@@ -46,4 +46,11 @@ mv molokai/colors/molokai.vim ~/.vim/colors/
 	https://github.com/dotBunny/VSCode/
 	・Unityの設定→External ToolsをVisualStudioCodeにする
 	・VSCodeタブのEnable Integration, Use Unity Debuggerにチェックを入れる
+```
+
+## Font Setting
+
+* Install
+```
+https://fonts.google.com/specimen/Inconsolata
 ```
