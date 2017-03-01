@@ -1,3 +1,5 @@
+" 最低限のvimrc
+
 set nu
 set ruler
 set notitle

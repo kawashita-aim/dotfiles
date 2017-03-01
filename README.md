@@ -4,7 +4,7 @@
 
 - .vimrcと.vimフォルダをroot直下に置くと幸せになれる
 
-### molokai with Vim
+### molokai with vim
 https://github.com/tomasr/molokai
 
 - vimrcに入れているがエラーが出るときは以下を手動で対応する
@@ -15,6 +15,9 @@ mkdir colors
 git clone https://github.com/tomasr/molokai
 mv molokai/colors/molokai.vim ~/.vim/colors/
 ```
+
+### Editor Config with vim
+https://github.com/editorconfig/editorconfig-vim
 
 
 ## VSCode Setting
@@ -61,3 +64,4 @@ brew install mono
 ```
 https://fonts.google.com/specimen/Inconsolata
 ```
+
